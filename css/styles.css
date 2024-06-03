@@ -33,3 +33,14 @@ main {
 .h2 {
   display: flex;
 }
+
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+button {
+  height: 30px;
+}
