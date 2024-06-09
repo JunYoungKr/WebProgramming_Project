@@ -26,22 +26,23 @@ $result = $conn->query($sql);
         <nav>
             <a href="../index.html">Home</a>
             <a href="logout.php">Logout</a>
+            <a href="profile.php">Profile</a>
         </nav>
     </header>
     <main>
         <section id="diary-list">
-            <h2>My Diary Entries</h2>
+            <h2>내 일기장</h2>
             <?php
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='diary-entry'>";
-                    echo "<h3>" . htmlspecialchars($row['title']) . "</h3>";
-                    echo "<p>" . nl2br(htmlspecialchars($row['content'])) . "</p>";
-                    echo "<small>" . $row['created_at'] . "</small>";
-                    echo "</div>";
+                    echo "<h3>제목: " . htmlspecialchars($row['title']) . "</h3>";
+                    echo "<p>내용:<br>" . nl2br(htmlspecialchars($row['content'])) . "</p>";
+                    echo "<small>작성일자: " . $row['created_at'] . "</small>";
+                    echo "</div><hr>";
                 }
             } else {
-                echo "<p>No diary entries found.</p>";
+                echo "<p>일기가 존재하지 않습니다.</p>";
             }
             $conn->close();
             ?>
