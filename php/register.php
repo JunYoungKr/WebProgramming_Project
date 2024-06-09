@@ -7,12 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 
-    if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!";
+    if ($conn->query($sql) === TRUE) {
+        echo "회원가입이 성공적으로 완료되었습니다.";
+        header("Location: login.html");
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    mysqli_close($conn);
+    $conn->close();
+} else {
+    echo "잘못된 요청입니다.";
 }
 ?>
