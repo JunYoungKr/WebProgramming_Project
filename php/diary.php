@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2>나의 일기장</h2>
         <nav>
             <a href="../index.html">Home</a>
+            <a href="diary.html">Write</a>
             <a href="logout.php">Logout</a>
             <a href="profile.php">Profile</a>
         </nav>
