@@ -30,8 +30,8 @@ $result = $conn->query($sql);
             <a href="profile.php">Profile</a>
         </nav>
     </header>
-    <main>
-        <section id="diary-list">
+    <main class="mainContainer">
+        <section class="sectionContainer" id="diary-list">
             <h2>내 일기장</h2>
             <?php
             if ($result->num_rows > 0) {

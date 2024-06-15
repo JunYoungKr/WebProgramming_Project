@@ -44,10 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="profile.php">Profile</a>
         </nav>
     </header>
-    <main>
-        <section id="write-diary">
+    <main class="mainContainer">
+        <section class="sectionContainer" id="write-diary">
             <h2>Write a new diary entry</h2>
-            <form action="diary.php" method="post">
+            <form class="registerContainer" action="diary.php" method="post">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required>
                 <label for="content">Content:</label>
