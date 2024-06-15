@@ -34,6 +34,14 @@ main {
   display: flex;
 }
 
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+.sectionContainer {
+  width: 90%;
+}
+
 .registerContainer {
   display: flex;
   flex-direction: column;
@@ -43,4 +51,61 @@ main {
 input,
 button {
   height: 30px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #593eec;
+    color: #fff;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  #welcome {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .h2 {
+    display: flex;
+  }
+
+  .mainContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .sectionContainer {
+    width: 20%;
+  }
+
+  .registerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  input,
+  button {
+    height: 30px;
+  }
 }
